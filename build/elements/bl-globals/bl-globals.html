@@ -1,0 +1,33 @@
+<polymer-element name="bl-globals">
+  <script>
+  (function() {
+    // these variables are shared by all instances of app-globals
+    var companyName = 'Biologic Resources, Inc.';
+    var pages = [
+      {
+        'url':'http://github.com',
+        'name':'GitHub'
+      },
+      {
+        'url':'https://www.polymer-project.org',
+        'name':'Polymer'
+      },
+      {
+        'url':'http://gruntjs.com',
+        'name':'Grunt'
+      },
+      {
+        'url':'https://atom.io/',
+        'name':'Atom'
+      }
+    ];
+    Polymer({
+       ready: function() {
+         // copy global values into instance properties
+         this.companyName = companyName;
+         this.pages = pages;
+       }
+    });
+  })();
+  </script>
+</polymer-element>

@@ -4,111 +4,28 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     copy: {
-      build: {
+      static: {
         cwd: 'source',
-        src: [ '**', '!**/*.styl', '!**/*.coffee', '!**/*.jade' ],
+        src: [ '**/*.html','**/*.css','elements/**/*.*','!bower_components/**/*.*','!old/**/*.*','!bower.json'],
+        dest: 'build',
+        expand: true
+      },
+      bower_components: {
+        cwd: 'source',
+        src: [ 'bower_components/**/*.*'],
         dest: 'build',
         expand: true
       },
     },
 
     clean: {
-      build: {
-        src: [ 'build' ]
-      },
-      stylesheets: {
-        src: [ 'build/**/*.css', '!build/application.css' ]
-      },
-      scripts: {
-        src: [ 'build/**/*.js', '!build/application.js' ]
-      },
-    },
-
-    stylus: {
-      build: {
-        options: {
-          linenos: true,
-          compress: false
-        },
-        files: [{
-          expand: true,
-          cwd: 'source',
-          src: [ '**/*.styl' ],
-          dest: 'build',
-          ext: '.css'
-        }]
-      }
-    },
-
-    autoprefixer: {
-      build: {
-        expand: true,
-        cwd: 'build',
-        src: [ '**/*.css' ],
-        dest: 'build'
-      }
-    },
-
-    cssmin: {
-      build: {
-        files: {
-          'build/application.css': [ 'build/**/*.css' ]
-        }
-      }
-    },
-
-    coffee: {
-      build: {
-        expand: true,
-        cwd: 'source',
-        src: [ '**/*.coffee' ],
-        dest: 'build',
-        ext: '.js'
-      }
-    },
-
-    uglify: {
-      build: {
-        options: {
-          mangle: false
-        },
-        files: {
-          'build/application.js': [ 'build/**/*.js' ]
-        }
-      }
-    },
-
-    jade: {
-      compile: {
-        options: {
-          data: {}
-        },
-        files: [{
-          expand: true,
-          cwd: 'source',
-          src: [ '**/*.jade' ],
-          dest: 'build',
-          ext: '.html'
-        }]
-      }
+      build: ['build'],
     },
 
     watch: {
-      stylesheets: {
-        files: 'source/**/*.styl',
-        tasks: [ 'stylesheets' ]
-      },
-      scripts: {
-        files: 'source/**/*.coffee',
-        tasks: [ 'scripts' ]
-      },
-      jade: {
-        files: 'source/**/*.jade',
-        tasks: [ 'jade' ]
-      },
       copy: {
-        files: [ 'source/**', '!source/**/*.styl', '!source/**/*.coffee', '!source/**/*.jade' ],
-        tasks: [ 'copy' ]
+        files: [ 'source/**' ],
+        tasks: [ 'copy:static' ]
       }
     },
 
@@ -138,21 +55,9 @@ module.exports = function(grunt) {
 
   // define the tasks
   grunt.registerTask(
-    'stylesheets',
-    'Compiles the stylesheets.',
-    [ 'stylus', 'autoprefixer', 'cssmin', 'clean:stylesheets' ]
-  );
-
-  grunt.registerTask(
-    'scripts',
-    'Compiles the JavaScript files.',
-    [ 'coffee', 'uglify', 'clean:scripts' ]
-  );
-
-  grunt.registerTask(
     'build',
     'Compiles all of the assets and copies the files to the build directory.',
-    [ 'clean:build', 'copy', 'stylesheets', 'scripts', 'jade' ]
+    [ 'clean:build', 'copy:static','copy:bower_components']
   );
 
   grunt.registerTask(

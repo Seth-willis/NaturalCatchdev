@@ -1,0 +1,21 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bl-globals/bl-globals.html">
+
+<polymer-element name="bl-side-navigation">
+  <template>
+    <link rel="stylesheet" href="bl-side-navigation.css">
+    <bl-globals id="globals"></bl-globals>
+    <template repeat="{{$.globals.pages}}">
+      <paper-item label="{{name}}">
+        <a href="{{url}}" target="_blank"></a>
+      </paper-item>
+    </template>
+  </template>
+  <script>
+    Polymer({
+      ready: function() {
+      }
+    });
+  </script>
+</polymer-element>

@@ -1,0 +1,22 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/core-toolbar/core-toolbar.html">
+<link rel="import" href="../../bower_components/core-icon-button/core-icon-button.html">
+<link rel="import" href="../bl-menu-button/bl-menu-button.html">
+<link rel="import" href="../bl-globals/bl-globals.html">
+
+<polymer-element name="bl-toolbar">
+  <template>
+    <link rel="stylesheet" href="bl-toolbar.css">
+    <bl-globals id="globals"></bl-globals>
+    <core-toolbar>
+      <bl-menu-button></bl-menu-button>
+      <span flex>{{$.globals.companyName}}</span>
+    </core-toolbar>
+  </template>
+  <script>
+    Polymer({
+      ready: function() {
+      }
+    });
+  </script>
+</polymer-element>
