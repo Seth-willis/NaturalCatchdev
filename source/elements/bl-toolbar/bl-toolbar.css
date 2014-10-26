@@ -1,3 +1,4 @@
-core-toolbar {
-  /*background-color:red;*/
+:host core-toolbar {
+  background-color: black;
+  color:#00FF00
 }

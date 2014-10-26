@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     watch: {
       copy: {
-        files: [ 'source/**/*.html','!source/bower_components/**/*.*','!source/old/**/*.*' ],
+        files: [ 'source/**/*.html','source/**/*.css','!source/bower_components/**/*.*','!source/old/**/*.*' ],
         tasks: [ 'copy:static' ]
       }
     },

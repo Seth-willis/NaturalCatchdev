@@ -1,0 +1,8 @@
+body{
+  background-color:black;
+  color:#00FF00;
+}
+
+bl-toolbar::shadow core-toolbar {
+  background-color:#AA55FF;
+}
