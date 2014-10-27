@@ -1,30 +1,22 @@
 <!--
 @module Biologic Toolbar
 
-`bl-toolbar` is an extension of `core-toolbar` that includes
-a title and menu button.  The title and menu items are driven
-'bl-global'.
+`bl-toolbar` is a wrapper for `core-toolbar` that creats the sites
+standard toolbar.  The title and menu items are driven by the 'bl-global'
+element (see pages, and companyName).
 
 Example:
 
-    <core-menu-button id="btn">
-         <core-item icon="settings" label="Settings"></core-item>
-         <core-item icon="dialog" label="Dialog"></core-item>
-         <core-item icon="search" label="Search"></core-item>
-    </core-menu-button>
+    <bl-toolbar></bl-toobar>
 
-Style the drop-down by using the `core-menu-button::shadow #dropdown` selector:
+Style the core-toolbar by using the `bl-toolbar::shadow core-toolbar` selector.
 
     /* position this drop-down below the button, and style it white on black. */
-    #btn::shadow #dropdown {
-        top: 38px;
-        color: #fff;
-        background: #000;
+    bl-toolbar::shadow core-toolbar {
+        background: blue;
     }
 
-@class core-menu-button
-@status beta
-@homepage github.io
+@class bl-toolbar
 -->
 
 
@@ -40,12 +32,13 @@ Style the drop-down by using the `core-menu-button::shadow #dropdown` selector:
     <bl-globals id="globals"></bl-globals>
     <core-toolbar>
       <bl-menu-button></bl-menu-button>
-      <span flex>{{title}}</span>
+      <span flex>{{$.globals.companyName}}</span>
     </core-toolbar>
   </template>
   <script>
     Polymer({
-      title:'test'
+      ready: function() {
+      }
     });
   </script>
 </polymer-element>
