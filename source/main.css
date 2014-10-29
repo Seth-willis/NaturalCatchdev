@@ -1,20 +1,21 @@
 body{
-  /*background-color:black;*/
-  /*color:#00FF00;*/
+
 }
 
-/*bl-toolbar::shadow core-toolbar {
-  background-color:#AA55FF;
-}*/
+h1{
+    border-style: solid;
+    border-width: 5px;
+}
+
+section {
+  opacity:0.5;
+}
 
 @media only screen
 and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : portrait)
 {
-  bl-side-navigation{
-    display:none;
-  }
 }
 
 @media only screen
@@ -22,7 +23,4 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : landscape)
 {
-  bl-toolbar::shadow core-toolbar bl-menu-button {
-    display:none;
-  }
 }
