@@ -6,3 +6,12 @@
 .sprite-mantis_256{ background-position: 0 -1530px; width: 256px; height: 256px; }
 .sprite-termite_256{ background-position: 0 -1836px; width: 256px; height: 256px; }
 .sprite-tick_256{ background-position: -306px 0; width: 256px; height: 256px; }
+
+
+/*
+Don't forget to add a background rule to reference the sprite image. Something like this, for example:
+*/
+
+#container li {
+    background: url(csg-545057e6c56b5.png) no-repeat top left;
+}
