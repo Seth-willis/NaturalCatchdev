@@ -3,23 +3,92 @@ body{
     background-image: url('http://p1.pichost.me/i/54/1771800.jpg');
 }
 
+#webtitle{
+  background:white;
+  height: 100px;
+  padding:50px;
+
+}
+
 h2{
     color:white;
     padding: 10px;
     text-shadow: 5px 5px 5px #FF0000;
 }
 section{
-    background:green;
-}
-
-#box4{
-    position:absolute;
-    left: 20%;
-    top: 50%px;
+    background:grey;
+    border:solid;
 }
 
 #box1{
-  bottom:20%;
-  right:10%;
-  position:absolute;
+    position:right;
+    padding:50px;
+    margin:20px;
+}
+
+#box2{
+    position:left;
+    padding:50px;
+    margin:20px;
+}
+
+#box3{
+    position:right;
+    padding:50px;
+    margin:20px;
+
+}
+
+#box4{
+
+    position:left;
+    padding:50px;
+    margin:20px;
+}
+
+#box5{
+    position:right;
+    padding:50px;
+    margin:20px;
+
+}
+
+
+.transition1{
+    position: relative;
+}
+
+.transition1 .hidden{
+    background-image: url=('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSaZfrdayBk-kWw2OwMPB_S-wCk6JgFWDtxIOr7qWkX9x5qI-9xPg');
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.transition1:hover .hidden{
+    opacity: 1;
+
+
+}
+.transition2{
+    position: relative;
+}
+
+.transition2 .hidden{
+    background-color:red;
+    height: 170px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.transition2:hover .hidden{
+    opacity: 1;
 }
