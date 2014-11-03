@@ -4,9 +4,10 @@ body{
 }
 
 #webtitle{
-  background:white;
+  background: black;
   height: 100px;
-  padding:50px;
+  padding: 50px;
+  color: white;
 
 }
 
@@ -53,20 +54,23 @@ section{
 
 }
 
+/* Transitions to make boxes blue/red, could use these for image transition in the future.*/
 
 .transition1{
     position: relative;
 }
 
 .transition1 .hidden{
-    background-image: url=('https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSaZfrdayBk-kWw2OwMPB_S-wCk6JgFWDtxIOr7qWkX9x5qI-9xPg');
-    height: 170px;
+    background-color:blue;
+    height: 290px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000px;
+    width: 2000px;
     opacity: 0;
     transition: all 1s ease;
+    border: 2px solid;
+    border-radius: 25px;
 }
 
 .transition1:hover .hidden{
@@ -80,15 +84,80 @@ section{
 
 .transition2 .hidden{
     background-color:red;
-    height: 170px;
+    height: 290px;
     position: absolute;
     top: 0;
     left: 0;
-    width: 1000px;
+    width: 2000px;
     opacity: 0;
     transition: all 1s ease;
+    border: 2px solid;
+    border-radius: 25px;
 }
 
 .transition2:hover .hidden{
+    opacity: 1;
+}
+
+.transition3{
+    position: relative;
+}
+
+.transition3 .hidden{
+    background-color:blue;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    opacity: 0;
+    transition: all 1s ease;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.transition3:hover .hidden{
+    opacity: 1;
+}
+
+.transition4{
+    position: relative;
+}
+
+.transition4 .hidden{
+    background-color:red;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    opacity: 0;
+    transition: all 1s ease;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.transition4:hover .hidden{
+    opacity: 1;
+}
+
+.transition5{
+    position: relative;
+}
+
+.transition5 .hidden{
+    background-color:blue;
+    height: 290px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    opacity: 0;
+    transition: all 1s ease;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.transition5:hover .hidden{
     opacity: 1;
 }
