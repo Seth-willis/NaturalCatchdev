@@ -1,6 +1,7 @@
 body{
     background-repeat:no-repeat;
     background-image: url('http://p1.pichost.me/i/54/1771800.jpg');
+
 }
 
 #webtitle{
@@ -16,47 +17,86 @@ h2{
     padding: 10px;
     text-shadow: 5px 5px 5px #FF0000;
 }
-section{
-    background:grey;
-    border:solid;
-}
 
 #box1{
-    position:right;
-    padding:50px;
-    margin:20px;
+
 }
 
 #box2{
-    position:left;
-    padding:50px;
-    margin:20px;
+
 }
 
 #box3{
-    position:right;
-    padding:50px;
-    margin:20px;
 
 }
 
 #box4{
 
-    position:left;
-    padding:50px;
-    margin:20px;
 }
 
 #box5{
-    position:right;
-    padding:50px;
-    margin:20px;
+
 
 }
 
-/* Transitions to make boxes blue/red, could use these for image transition in the future.*/
+.transition {
+  border: 2px solid;
+  border-radius: 25px;
+  margin-bottom: 100px;
+  padding: 10px;
+  width: 256px;
+  height: 256px;
+  position: absolute;
+  background: url(https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/csg-545057e6c56b5.png) no-repeat top left;
+}
+
+.transition:hover{
+  background-image:none;
+}
+
+section {
+  /*background:grey;*/
+  border:solid;
+  opacity: 0;
+  padding: 10px;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+section:hover {
+  opacity: 1;
+}
 
 .transition1{
+  border-color: brown;
+  background-color: blue;
+  left: 20%;
+  bottom: 25%;
+  /*background: no-repeat white url('https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/ant_256.png');*/
+}
+
+.transition2{
+  /* customize colour and border for all */
+  background-position: 0 -306px;
+  background-color: red;
+  right: 5em;
+  top: 50%;
+
+}
+
+.transition3{
+  background:white;
+}
+.transition4{
+  background:white;
+}
+.transition5{
+  background-color:white;
+}
+/* Transitions to make boxes blue/red, could use these for image transition in the future.*/
+
+/*.transition1{
     position: relative;
 }
 
@@ -146,6 +186,10 @@ section{
 }
 
 .transition5 .hidden{
+    opacity: 1;
+}
+
+.transition5:hover .hidden{
     background-color:blue;
     height: 290px;
     position: absolute;
@@ -153,11 +197,7 @@ section{
     left: 0;
     width: 2000px;
     opacity: 0;
-    transition: all 1s ease;
+    transition: opacity 1s ease-in;
     border: 2px solid;
     border-radius: 25px;
-}
-
-.transition5:hover .hidden{
-    opacity: 1;
-}
+}*/
