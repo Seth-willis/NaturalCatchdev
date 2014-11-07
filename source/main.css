@@ -1,5 +1,5 @@
 body{
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     background-image: url('http://p1.pichost.me/i/54/1771800.jpg');
 
 }
@@ -40,7 +40,7 @@ h2{
 }
 
 .transition {
-  border: 2px solid;
+  border: 5px solid;
   border-radius: 25px;
   margin-bottom: 100px;
   padding: 10px;
@@ -56,7 +56,7 @@ h2{
 
 section {
   /*background:grey;*/
-  border:solid;
+  /*border:solid;*/
   opacity: 0;
   padding: 10px;
   transition: opacity .25s ease-in-out;
@@ -69,30 +69,54 @@ section:hover {
 }
 
 .transition1{
-  border-color: brown;
-  background-color: blue;
+  border-color: black;
+  background-color: orange;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
   left: 20%;
-  bottom: 25%;
+  top: 80%;
   /*background: no-repeat white url('https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/ant_256.png');*/
 }
 
 .transition2{
   /* customize colour and border for all */
   background-position: 0 -306px;
-  background-color: red;
-  right: 5em;
-  top: 50%;
-
+  background-color: grey;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  top: 30%;
+  right:70%;
 }
 
 .transition3{
-  background:white;
+  background-position: 0 -612px;
+  background-color: grey;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  right: 40%;
+  top: 60%;
 }
 .transition4{
-  background:white;
+  background-position: 0 -1224px;
+  background-color: grey;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  left: 40%;
+  top: 90%;
+
 }
 .transition5{
-  background-color:white;
+  background-position: -306px 0;
+  background-color: yellow;
+  border: 3px;
+  border-style: solid;
+  border-color: black;
+  left: 40%;
+  top: 90%;
 }
 /* Transitions to make boxes blue/red, could use these for image transition in the future.*/
 
