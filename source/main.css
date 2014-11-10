@@ -45,13 +45,6 @@ h2{
 }
 
 .transition {
-  border: 5px solid;
-  border-radius: 25px;
-  margin-bottom: 100px;
-  padding: 10px;
-  width: 256px;
-  height: 256px;
-  position: absolute;
   /*background: url(https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/csg-545057e6c56b5.png) no-repeat top left;*/
 }
 /*remove hover and make it click able*/
@@ -59,7 +52,17 @@ h2{
   background-image:none;
 }*/
 
-section {
+.insect-trap {
+  border: 5px solid;
+  border-radius: 25px;
+  margin-bottom: 100px;
+  padding: 10px;
+  width: 256px;
+  height: 256px;
+  position: absolute;
+}
+
+.insect-trap-description {
   /*background:grey;*/
   /*border:solid;*/
   opacity: 0;
@@ -69,16 +72,15 @@ section {
   -webkit-transition: opacity .25s ease-in-out;
 }
 
-section:hover {
+.insect-trap-description-visible {
   opacity: 1;
 }
-
 
 .sprite{
   background-image: url('./images/csg-545057e6c56b5.png');
   background-repeat: no-repeat;
 }
-.no-sprite{
+.sprite-hidden{
   background-image: none;
 }
 .sprite-ant_256{ background-position: 0 0; width: 256px; height: 256px; }
@@ -93,7 +95,7 @@ section:hover {
 
 
 /*change names for transitions*/
-.transition1{
+#ant{
   border-color: black;
   background-color: orange;
   border: 3px;
@@ -101,13 +103,9 @@ section:hover {
   border-color: black;
   left: 50px;
   top: 70px;
-
-  /*background: no-repeat white url('https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/ant_256.png');*/
 }
 
-.transition2{
-  /* customize colour and border for all */
-  /*background-position: 0 -306px;*/
+#black-spider{
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -116,8 +114,7 @@ section:hover {
   right:70%;
 }
 
-.transition3{
-  /*background-position: 0 -612px;*/
+#cockroach{
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -125,8 +122,7 @@ section:hover {
   right: 40%;
   top: 60%;
 }
-.transition4{
-  /*background-position: 0 -1224px;*/
+#flea{
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -135,13 +131,12 @@ section:hover {
   top: 90%;
 
 }
-.transition5{
-  /*background-position: -306px 0;*/
+#dragon-fly{
   background-color: yellow;
   border: 3px;
   border-style: solid;
   border-color: black;
-  left: 40%;
+  left: 60%;
   top: 90%;
 }
 /* Transitions to make boxes blue/red, could use these for image transition in the future.*/
