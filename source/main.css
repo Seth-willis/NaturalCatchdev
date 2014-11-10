@@ -39,6 +39,11 @@ h2{
 
 }
 
+/* temp ... */
+.test-class {
+  background-image:none;
+}
+
 .transition {
   border: 5px solid;
   border-radius: 25px;
@@ -47,12 +52,12 @@ h2{
   width: 256px;
   height: 256px;
   position: absolute;
-  background: url(https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/csg-545057e6c56b5.png) no-repeat top left;
+  /*background: url(https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/csg-545057e6c56b5.png) no-repeat top left;*/
 }
 /*remove hover and make it click able*/
-.transition:hover{
+/*.transition:hover{
   background-image:none;
-}
+}*/
 
 section {
   /*background:grey;*/
@@ -67,6 +72,26 @@ section {
 section:hover {
   opacity: 1;
 }
+
+
+.sprite{
+  background-image: url('./images/csg-545057e6c56b5.png');
+  background-repeat: no-repeat;
+}
+.no-sprite{
+  background-image: none;
+}
+.sprite-ant_256{ background-position: 0 0; width: 256px; height: 256px; }
+.sprite-black_spider_256{ background-position: 0 -306px; width: 256px; height: 256px; }
+.sprite-cockroach_256{ background-position: 0 -612px; width: 256px; height: 256px; }
+.sprite-dragon_fly_256{ background-position: 0 -918px; width: 256px; height: 256px; }
+.sprite-flea_256{ background-position: 0 -1224px; width: 256px; height: 256px; }
+.sprite-mantis_256{ background-position: 0 -1530px; width: 256px; height: 256px; }
+.sprite-termite_256{ background-position: 0 -1836px; width: 256px; height: 256px; }
+.sprite-tick_256{ background-position: -306px 0; width: 256px; height: 256px; }
+
+
+
 /*change names for transitions*/
 .transition1{
   border-color: black;
@@ -76,12 +101,13 @@ section:hover {
   border-color: black;
   left: 50px;
   top: 70px;
+
   /*background: no-repeat white url('https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/ant_256.png');*/
 }
 
 .transition2{
   /* customize colour and border for all */
-  background-position: 0 -306px;
+  /*background-position: 0 -306px;*/
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -91,7 +117,7 @@ section:hover {
 }
 
 .transition3{
-  background-position: 0 -612px;
+  /*background-position: 0 -612px;*/
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -100,7 +126,7 @@ section:hover {
   top: 60%;
 }
 .transition4{
-  background-position: 0 -1224px;
+  /*background-position: 0 -1224px;*/
   background-color: grey;
   border: 3px;
   border-style: solid;
@@ -110,7 +136,7 @@ section:hover {
 
 }
 .transition5{
-  background-position: -306px 0;
+  /*background-position: -306px 0;*/
   background-color: yellow;
   border: 3px;
   border-style: solid;

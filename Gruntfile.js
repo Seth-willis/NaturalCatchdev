@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     copy: {
       static: {
         cwd: 'source',
-        src: [ '**/*.html','**/*.css','elements/**/*.*','!bower_components/**/*.*','!old/**/*.*','!bower.json'],
+        src: [ '**/*.html','**/*.css','images/**/*.*','scripts/**/*.*','elements/**/*.*','!bower_components/**/*.*','!old/**/*.*','!bower.json'],
         dest: 'build',
         expand: true
       },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 
     watch: {
       copy: {
-        files: [ 'source/**/*.html','source/**/*.css','!source/bower_components/**/*.*','!source/old/**/*.*' ],
+        files: [ 'source/**/*.html','source/**/*.css','source/**/*.js','!source/bower_components/**/*.*','!source/old/**/*.*' ],
         tasks: [ 'copy:static' ]
       }
     },
