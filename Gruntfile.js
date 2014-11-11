@@ -18,6 +18,12 @@ module.exports = function(grunt) {
       },
     },
 
+  exec: {
+    deploy: {
+      cmd: 'rsync -rltDvzO --no-o --no-g --del --chmod=ugo=rwX build/ mfam.us:bugtraps/'
+    },
+  },
+
     clean: {
       build: ['build'],
     },
@@ -52,6 +58,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-exec');
 
   // define the tasks
   grunt.registerTask(
@@ -64,5 +71,11 @@ module.exports = function(grunt) {
     'default',
     'Watches the project for changes, automatically builds them and runs a server.',
     [ 'build', 'connect', 'watch' ]
+  );
+
+  grunt.registerTask(
+    'deploy',
+    'Deploys all files to mfam.us',
+    ['exec:deploy']
   );
 };

@@ -1,65 +1,99 @@
-body{
-    background-repeat:repeat;
-    background-image: url('http://p1.pichost.me/i/54/1771800.jpg');
+/* resets */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+	content: "";
+  display: table;
+  clear: both;
+}
+
+/* global */
+body {
+  background-color: rgb(40,40,40);
+  color: rgb(100,100,100);
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 95%;
+    /*background-color: #fff;*/
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+/* grid */
+.row {
+  margin: 0 -10px;
+  /*margin-bottom: 20px;*/
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding: 10px;
+}
+
+@media all and ( min-width: 700px ) {
+
+  .col-1-3 {
+    float: right;
+    width: 33.33%;
+  }
+
+  .col-1{
+    float: left;
+    width: 100%;
+
+  }
 
 }
 
-#webtitle{
+
+
+/*body{
+    background-repeat:repeat;
+    background-image: url('http://p1.pichost.me/i/54/1771800.jpg');
+
+}*/
+
+.title{
+
   background: black;
-  height: 100px;
-  padding: 50px;
   color: white;
 
 }
 
-h2{
+/*h2{
     color:white;
     padding: 10px;
     text-shadow: 5px 5px 5px #FF0000;
-}
-
-#box1{
-
-}
-
-#box2{
-
-}
-
-#box3{
-
-}
-
-#box4{
-
-}
-
-#box5{
-
-
-}
-
-/* temp ... */
-.test-class {
-  background-image:none;
-}
-
-.transition {
-  /*background: url(https://raw.githubusercontent.com/Seth-willis/NaturalCatchdev/master/source/images/csg-545057e6c56b5.png) no-repeat top left;*/
-}
-/*remove hover and make it click able*/
-/*.transition:hover{
-  background-image:none;
 }*/
 
 .insect-trap {
   border: 5px solid;
   border-radius: 25px;
-  margin-bottom: 100px;
+  /*margin-bottom: 100px;*/
   padding: 10px;
   width: 256px;
   height: 256px;
-  position: absolute;
+  /*position: absolute;*/
 }
 
 .insect-trap-description {
@@ -100,18 +134,18 @@ h2{
   background-color: orange;
   border: 3px;
   border-style: solid;
-  border-color: black;
-  left: 50px;
-  top: 70px;
+  border-color: white;
+  /*left: 50px;*/
+  /*top: 70px;*/
 }
 
 #black-spider{
-  background-color: grey;
+  background-color: red;
   border: 3px;
   border-style: solid;
   border-color: black;
-  top: 30%;
-  right:70%;
+  /*top: 30%;*/
+  /*right:70%;*/
 }
 
 #cockroach{
@@ -119,16 +153,16 @@ h2{
   border: 3px;
   border-style: solid;
   border-color: black;
-  right: 40%;
-  top: 60%;
+  /*right: 40%;*/
+  /*top: 60%;*/
 }
 #flea{
   background-color: grey;
   border: 3px;
   border-style: solid;
   border-color: black;
-  left: 40%;
-  top: 90%;
+  /*left: 40%;*/
+  /*top: 90%;*/
 
 }
 #dragon-fly{
@@ -136,113 +170,6 @@ h2{
   border: 3px;
   border-style: solid;
   border-color: black;
-  left: 60%;
-  top: 90%;
+  /*left: 60%;*/
+  /*top: 90%;*/
 }
-/* Transitions to make boxes blue/red, could use these for image transition in the future.*/
-
-/*.transition1{
-    position: relative;
-}
-
-.transition1 .hidden{
-    background-color:blue;
-    height: 290px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2000px;
-    opacity: 0;
-    transition: all 1s ease;
-    border: 2px solid;
-    border-radius: 25px;
-}
-
-.transition1:hover .hidden{
-    opacity: 1;
-
-
-}
-.transition2{
-    position: relative;
-}
-
-.transition2 .hidden{
-    background-color:red;
-    height: 290px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2000px;
-    opacity: 0;
-    transition: all 1s ease;
-    border: 2px solid;
-    border-radius: 25px;
-}
-
-.transition2:hover .hidden{
-    opacity: 1;
-}
-
-.transition3{
-    position: relative;
-}
-
-.transition3 .hidden{
-    background-color:blue;
-    height: 290px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2000px;
-    opacity: 0;
-    transition: all 1s ease;
-    border: 2px solid;
-    border-radius: 25px;
-}
-
-.transition3:hover .hidden{
-    opacity: 1;
-}
-
-.transition4{
-    position: relative;
-}
-
-.transition4 .hidden{
-    background-color:red;
-    height: 290px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2000px;
-    opacity: 0;
-    transition: all 1s ease;
-    border: 2px solid;
-    border-radius: 25px;
-}
-
-.transition4:hover .hidden{
-    opacity: 1;
-}
-
-.transition5{
-    position: relative;
-}
-
-.transition5 .hidden{
-    opacity: 1;
-}
-
-.transition5:hover .hidden{
-    background-color:blue;
-    height: 290px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2000px;
-    opacity: 0;
-    transition: opacity 1s ease-in;
-    border: 2px solid;
-    border-radius: 25px;
-}*/

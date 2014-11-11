@@ -10,17 +10,21 @@
           <script src="./scripts/main.js"></script>
           <script>
             $(function() {
-              handleBackgroundToggling();
+              addClickHandlers();
             });
           </script>
     </head>
           <body>
+            <div class="wrapper">
 
-            <div align="center" id="webtitle">
+            <div class="row clearfix">
+            <div class="col-1 title">
             <h1><p>Website</p></h1>
             </div>
+            </div>
 
-            <div id="ant" class="insect-trap sprite sprite-ant_256">
+          <div class="row clearfix">
+            <div id="ant" class="col-1-3 insect-trap sprite sprite-ant_256">
             <section class="insect-trap-description">
               <h2>Ant Trap</h2>
               <p> Bil ta tu pifa etobigem tadar nenohu po ner hetiev. Inor taho elac niedam dereki. Xeresey ecidage di yute? No selume nuceg.
@@ -29,7 +33,7 @@
                 <!--<div class="hidden"></div>-->
             </div>
 
-            <div id="black-spider" class="insect-trap sprite sprite-black_spider_256">
+            <div id="black-spider" class="col-1-3 insect-trap sprite sprite-black_spider_256">
             <section class="insect-trap-description">
               <h2>Spider Trap</h2>
               <p> Noyaba eroreniec rinih; ter sukice mi unadu calol ne. Recom teru adufas isorena demoyox tesuta calutil fumeca.
@@ -38,7 +42,7 @@
                 <div class="hidden"></div>
             </div>
 
-            <div id="cockroach" class="insect-trap sprite sprite-cockroach_256">
+            <div id="cockroach" class="col-1-3 insect-trap sprite sprite-cockroach_256">
             <section class="insect-trap-description">
               <h2>Cockroach Trap</h2>
               <p> No selume nuceg. Noyaba eroreniec rinih; ter sukice mi unadu calol ne. Recom teru adufas isorena demoyox tesuta calutil fumeca.
@@ -46,8 +50,10 @@
             </section>
                 <div class="hidden"></div>
             </div>
+          </div>
 
-            <div id="flea" class="insect-trap sprite sprite-flea_256">
+          <div class="row clearfix">
+            <div id="flea" class="col-1-3 insect-trap sprite sprite-flea_256">
             <section class="insect-trap-description">
               <h2>Flea Trap</h2>
               <p>Tu mater sat cahah eyoredet luc yovedar efebi tagem, mu rona celor heqi. Fologe hanebo tapo besepe yegaro!
@@ -56,7 +62,7 @@
                 <div class="hidden"></div>
             </div>
 
-            <div id="dragon-fly" class="insect-trap sprite sprite-dragon_fly_256">
+            <div id="dragon-fly" class="col-1-3 insect-trap sprite sprite-dragon_fly_256">
             <section class="insect-trap-description">
               <h2>Dragon Fly Trap</h2>
               <p>Tu mater sat cahah eyoredet luc yovedar efebi tagem, mu rona celor heqi. Fologe hanebo tapo besepe yegaro!
@@ -64,5 +70,7 @@
             </section>
                 <div class="hidden"></div>
             </div>
+          </div>
+        </div>
             </body>
   </html>
