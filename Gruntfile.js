@@ -76,6 +76,6 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'deploy',
     'Deploys all files to mfam.us',
-    ['exec:deploy']
+    ['build','exec:deploy']
   );
 };
