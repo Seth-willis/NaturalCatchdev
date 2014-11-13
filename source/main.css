@@ -21,6 +21,7 @@
     font-size: 14px;
     line-height: 1.3;
   }
+  
 
   .wrapper {
     margin: 0 auto;
@@ -97,6 +98,16 @@ and (orientation : portrait) {
   .sprite{
     background-image: none;
   }
+
+  body {
+    background-color: #CCCC99;
+    color: black;
+  }
+
+  .title {
+    background-color: white;
+    color: black;
+  }
 }
 
 .title{
@@ -108,9 +119,9 @@ and (orientation : portrait) {
   border-color: black;
   border-style: outset;
   width: auto;
-  float: left;
-  align: center;
-  margin:0px auto;
+  height: 100%;
+  float: auto;
+
 
 }
 
